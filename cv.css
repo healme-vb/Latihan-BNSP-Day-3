@@ -1,0 +1,428 @@
+/* =====================================
+   CV MUHAMMAD HYLMI VIBE
+   Clean Professional Color Theme
+   ===================================== */
+
+:root {
+  --navy: #19365b;
+  --blue: #3978c5;
+  --blue-light: #e8f1fc;
+  --white: #ffffff;
+  --background: #f1f4f8;
+  --text: #344256;
+  --muted: #68788d;
+  --border: #dce4ee;
+}
+
+/* Pengaturan dasar */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 35px 20px;
+  background: var(--background);
+  color: var(--text);
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* Kontainer CV */
+.cv-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  overflow: hidden;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgb(25 54 91 / 8%);
+}
+
+/* Header dan foto */
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  padding: 32px 38px;
+  background: var(--navy);
+  color: var(--white);
+}
+
+.profile-photo {
+  width: 140px;
+  height: 165px;
+  flex-shrink: 0;
+  object-fit: cover;
+  object-position: center;
+  border: 3px solid var(--white);
+  border-radius: 8px;
+  background: var(--blue-light);
+}
+
+.profile-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: #a9ccfa;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.profile-info h1 {
+  margin: 0;
+  color: var(--white);
+  font-size: 32px;
+  line-height: 1.3;
+}
+
+.profile-info h2 {
+  margin: 8px 0;
+  color: #c6dcfa;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.profile-description {
+  margin: 8px 0 0;
+  color: #e5edf8;
+}
+
+/* Layout dua kolom */
+.cv-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr);
+}
+
+.main-column,
+.side-column {
+  min-width: 0;
+  padding: 28px;
+}
+
+.main-column {
+  background: var(--white);
+  border-right: 1px solid var(--border);
+}
+
+.side-column {
+  background: #f7f9fc;
+}
+
+/* Judul setiap bagian */
+.cv-section {
+  margin-bottom: 26px;
+  break-inside: avoid;
+}
+
+.cv-section:last-child {
+  margin-bottom: 0;
+}
+
+.section-title {
+  margin: 0 0 15px;
+  padding: 0 0 8px;
+  color: var(--navy);
+  font-size: 17px;
+  font-weight: 700;
+  border-bottom: 2px solid var(--blue-light);
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 48px;
+  height: 2px;
+  background: var(--blue);
+}
+
+.cv-section p {
+  margin: 6px 0;
+}
+
+.cv-section h4 {
+  margin: 0 0 5px;
+  color: var(--navy);
+  font-size: 14px;
+}
+
+strong {
+  color: var(--navy);
+}
+
+/* Pendidikan dan pengalaman */
+.timeline-item {
+  margin: 0 0 20px 5px;
+  padding-left: 15px;
+  border-left: 2px solid #d5e4f7;
+  position: relative;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: -6px;
+  width: 8px;
+  height: 8px;
+  border: 2px solid var(--white);
+  border-radius: 50%;
+  background: var(--blue);
+}
+
+.date-label {
+  display: inline-block;
+  margin-bottom: 5px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: var(--blue-light);
+  color: var(--blue);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.item-subtitle {
+  color: var(--muted);
+  font-weight: 600;
+}
+
+/* Proyek */
+.project-item {
+  margin-bottom: 13px;
+  padding: 13px 15px;
+  background: #fbfcfe;
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--blue);
+  border-radius: 5px;
+}
+
+.project-item:last-child {
+  margin-bottom: 0;
+}
+
+.project-item p {
+  margin: 6px 0 9px;
+}
+
+/* Tag keahlian */
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.tag-list span {
+  padding: 3px 8px;
+  background: var(--blue-light);
+  color: var(--navy);
+  border: 1px solid #d6e5f8;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.skill-heading {
+  margin-top: 15px !important;
+}
+
+/* Kontak */
+.contact-item {
+  margin-bottom: 13px;
+  overflow-wrap: anywhere;
+}
+
+.contact-item:last-child {
+  margin-bottom: 0;
+}
+
+.contact-label {
+  display: block;
+  color: var(--blue);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.contact-item p {
+  margin: 2px 0 0;
+}
+
+/* Daftar keahlian pendukung */
+.simple-list {
+  margin: 0;
+  padding-left: 19px;
+}
+
+.simple-list li {
+  margin-bottom: 6px;
+}
+
+.simple-list li::marker {
+  color: var(--blue);
+}
+
+/* Footer */
+.cv-footer {
+  padding: 12px 20px;
+  background: var(--navy);
+  color: #e5edf8;
+  text-align: center;
+  font-size: 12px;
+}
+
+.cv-footer p {
+  margin: 0;
+}
+
+/* Tampilan HP */
+@media (max-width: 700px) {
+  body {
+    padding: 12px;
+    font-size: 13px;
+  }
+
+  .profile-header {
+    flex-direction: column;
+    padding: 25px 18px;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .profile-photo {
+    width: 120px;
+    height: 145px;
+  }
+
+  .profile-info h1 {
+    font-size: 26px;
+  }
+
+  .profile-info h2 {
+    font-size: 15px;
+  }
+
+  .cv-content {
+    grid-template-columns: 1fr;
+  }
+
+  .main-column,
+  .side-column {
+    padding: 22px 18px;
+  }
+
+  .main-column {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+}
+
+/* Cetak dan simpan PDF */
+@media print {
+  @page {
+    size: A4;
+    margin: 10mm;
+  }
+
+  body {
+    padding: 0;
+    background: white;
+    font-size: 9pt;
+    line-height: 1.5;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .cv-container {
+    max-width: none;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .profile-header {
+    padding: 20px;
+  }
+
+  .profile-photo {
+    width: 105px;
+    height: 125px;
+  }
+
+  .profile-info h1 {
+    font-size: 23px;
+  }
+
+  .main-column,
+  .side-column {
+    padding: 17px 14px;
+  }
+
+  .cv-section {
+    margin-bottom: 16px;
+  }
+
+  .project-item,
+  .timeline-item {
+    break-inside: avoid;
+  }
+
+  .project-item {
+    padding: 9px;
+  }
+}
+img {
+  width: 150px;
+  height: 150px;
+}
+
+/* 7. Responsive: tablet */
+@media (max-width: 768px) {
+  .header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .summary {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* 8. Responsive: ponsel */
+@media (max-width: 480px) {
+  .summary {
+    grid-template-columns: 1fr;
+  }
+
+  .section-heading {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .btn-primary {
+    width: 100%;
+  }
+
+  .content-section {
+    padding: 12px;
+  }
+
+  th,
+  td {
+    padding: 8px;
+    font-size: 13px;
+  }
+}
